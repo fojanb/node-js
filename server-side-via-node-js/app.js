@@ -8,53 +8,41 @@ YY   zz   XX
 ...      ...
 ___________________________
 */
+// Http -> For creating a server
 const http = require("http");
+// fs -> For CRUD files
 const fs = require("fs");
+// URL -> For working with paths
 const url = require("url");
+// events -> For raising an event
 const events = require("events");
+// uc is one of the NPM packages
 const uc = require("upper-case");
+// Formidable (NPM package)-> For uploading a file
 const formidable = require("formidable");
-/* let adr = 'http://localhost:8080/default.htm?year=2017&month=february';
-let x = url.parse(adr, true);
-console.log(x);*/
-const eventEmitter = new events.EventEmitter();
-const myEventHandler = () => {
-  console.log("This is an event handler");
-};
-http
-  .createServer((req, res) => {
-    if (req.url == "/fileupload") {
-      let form = new formidable.IncomingForm();
-      form.parse(req, (err, fields, files) => {
-        res.write("File uploaded");
-        res.end();
-      });
-    } else {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(
-        `<form action="fileupload" method="post" enctype="multipart/form-data">
-      <input type="file" name="filetoupload"><br>
-      <input type="submit">
-      </form>
-      `
-      );
-      return res.end();
-    }
+// Nodemailer (NPM package) -> For sending an e-mail
+const nodemailer = require("nodemailer");
 
-    // eventEmitter.on('scream', myEventHandler);
-    // let q = url.parse(req.url, true);
-    // let filename = `.${q.pathname}`;
-    // fs.readFile(filename, function (err, data) {
-    //   if (err) {
-    //     res.writeHead(404, { "Content-Type": "text/html" });
-    //     return res.end(uc.upperCase("Fojan this page is not found"));
-    //   }
-    //   res.writeHead(200, { "Content-Type": "text/html" });
-    //   res.write(data);
-    //   return res.end();
-  })
-  // res.writeHead(200, { "Content-Type": "text/html" });
-  // res.write(req.url); //write a response to the client
-  // res.end(); //end the response
+const server = http.createServer((req, res) => {
+  if (req.url === "/api/upload" && req.method.toLowerCase() === "post") {
+    let form = new formidable.IncomingForm();
+    form.parse(req, (err, fields, files) => {
+      res.end(JSON.stringify({ fields, files }, null, 2));
+    });
+  } else {
+    // show a file upload form
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(`
+    <h2>With Node.js <code>"http"</code> module</h2>
+    <form action="/api/upload" enctype="multipart/form-data" method="post">
+      <div>Text field title: <input type="text" name="title" /></div>
+      <div>File: <input type="file" name="multipleFiles" multiple="multiple" /></div>
+      <input type="submit" value="Upload" />
+    </form>
+  `);
+  }
+});
 
-  .listen(8080); //the server object listens on port 8080
+server.listen(8080, () =>
+  console.log("Server listening on http://localhost:8080/ ...")
+); //the server object listens on port 8080
