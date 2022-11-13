@@ -8,22 +8,32 @@ YY   zz   XX
 ...      ...
 ___________________________
 */
-// Http -> For creating a server
+// Http (node.js module) -> For creating a server
 const http = require("http");
-// fs -> For CRUD files
+// fs (node.js module) -> For CRUD files
 const fs = require("fs");
-// URL -> For working with paths
+// URL (node.js module) -> For working with paths
 const url = require("url");
-// events -> For raising an event
+// events (node.js module) -> For raising an event
 const events = require("events");
-// uc is one of the NPM packages
+// uc (NPM package)
 const uc = require("upper-case");
 // Formidable (NPM package)-> For uploading a file
 const formidable = require("formidable");
 // Nodemailer (NPM package) -> For sending an e-mail
 const nodemailer = require("nodemailer");
-
+// mysql (NPM package)
+const mysql = require('mysql');
 const server = http.createServer((req, res) => {
+  const con = mysql.createConnection({
+    host: "localhost",
+    user: "yourusername",
+    password: "psst"
+  });
+  con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
   if (req.url === "/api/upload" && req.method.toLowerCase() === "post") {
     let form = new formidable.IncomingForm();
     form.parse(req, (err, fields, files) => {
@@ -42,7 +52,6 @@ const server = http.createServer((req, res) => {
   `);
   }
 });
-
 server.listen(8080, () =>
   console.log("Server listening on http://localhost:8080/ ...")
 ); //the server object listens on port 8080
