@@ -10,10 +10,12 @@ module.exports.message = message;
 module.exports.name = name;
 module.exports.date = date;
 // Key-Value pair: 
-/* const exports = {
+/* module.exports = {
     log : const log = (name) => {
           console.log(`Hello, ${name}`);
         },
     name : "Makan",
     }
-}*/ 
+}
+
+*/ 
