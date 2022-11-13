@@ -3,7 +3,7 @@ ___________________________
 app.js is the ROOT module :
     app.js     
   /...|...\
-YY   zz   XX
+YY...ZZ...XX
 /|\ /|\  /|\
 ...      ...
 ___________________________
@@ -24,6 +24,7 @@ const formidable = require("formidable");
 const nodemailer = require("nodemailer");
 // mysql (NPM package)
 const mysql = require('mysql');
+// Setup a server on port 8080 :
 const server = http.createServer((req, res) => {
   const con = mysql.createConnection({
     host: "localhost",
