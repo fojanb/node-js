@@ -27,5 +27,5 @@ const myData = require("./6-alternative-syntax");
 require("./7-mind-grenade");
 // sayHi(names.name.fojan);
 // sayHi(names.name.makan);
-// costume module ---> require("./jsFileName") relative path
-// built-in module ---> require("moduleName")
+// costume module 👉 require("./jsFileName") relative path
+// built-in module 👉 require("moduleName")

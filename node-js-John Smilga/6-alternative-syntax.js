@@ -5,7 +5,7 @@ const person = {
 
 module.exports.myData = { items, person };
 /*
-// Key-Value pair: 
+// Key-Value pair👇
 module.exports.KEY = VALUE;
 exports = {
   myData : {
@@ -18,7 +18,7 @@ exports = {
 */
 
 /*
-// Key-Value pair: 
+// Key-Value pair👇 
 
 module.exports.items = items;
 module.exports.person = person;
