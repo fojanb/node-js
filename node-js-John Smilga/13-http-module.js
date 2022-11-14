@@ -2,6 +2,7 @@ const http = require("http");
 
 const server = http.createServer((req, res) => {
   // User Endpoint 👉 req.url
+  // Common practice for homepage is "/"
   if (req.url === "/") {
     res.end("Welcome to our homepage (http://localhost:8080/)");
   }
@@ -16,4 +17,4 @@ const server = http.createServer((req, res) => {
 });
 server.listen(8080, () =>
   console.log("Server listening on http://localhost:8080/ ...")
-); //the server object listens on port 8080
+); //The server object listens on port 8080
