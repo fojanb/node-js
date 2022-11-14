@@ -1,7 +1,7 @@
 /* 
 GLOBALS - NO WINDOW !!!
 ________________________
-Globals in node :
+Globals in node 👇
 __dirname  👉  path to current directory
 __filename 👉  file name
 module     👉  capsulated infos about current module (js file)
@@ -11,6 +11,11 @@ proccess   👉  info about the env where the program is being executed
 ________________________
 node.js is asynchronous (non-blocking) or single-threaded
 node.js is based on modularity
+________________________
+TYPE OF MODULES 👇
+1-Our Own written modules (a regular js file, nothing fancy)
+2-node.js's built-in modules
+3-npm modules (aka packages)
 
 
 
@@ -20,4 +25,3 @@ node.js is based on modularity
 
 
 */
-
