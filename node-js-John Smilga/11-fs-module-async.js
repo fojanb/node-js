@@ -26,3 +26,6 @@ readFile("./content/first.txt", "utf8", (err, result) => {
     );
   });
 });
+// Solution to callback hell 👉  Promise()
+
+ 
