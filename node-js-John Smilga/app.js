@@ -1,7 +1,14 @@
 /*
 
-FACT : npm comes with node (^_^)
+👉FACT : npm comes with node (^_^)
 How to check npm version on windows? open CLI and tyope 'npm -v'
+___________________________
+app.js is the ROOT module :
+    app.js     
+  /...|...\
+YY...ZZ...XX
+/|\ /|\  /|\
+...      ...
 ___________________________
 There are two types of method to install a package
 1 - Locally (aka Local Dependencies)
@@ -21,8 +28,14 @@ and exactly what they do.
 
 Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
+___________________________
+
+👉FACT : Nodemon is a popular tool that is used for the development o
+f applications based on node. js. It simply restarts the node 
+application whenever it observes the changes in the file present 
+in the working directory of your project.
 */
 const _ = require("lodash");
 const items = [1, [2, [3, [4]]]];
 const newItems = _.flattenDeep(items);
-console.log(newItems)
+console.log(newItems);
