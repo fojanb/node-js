@@ -10,7 +10,7 @@ YY...ZZ...XX
 /|\ /|\  /|\
 ...      ...
 ___________________________
-There are two types of method to install a package
+There are two types of methods to install a PACKAGE
 1 - Locally (aka Local Dependencies)
 2 - Globally (aka Global Dependencies)
 ___________________________
@@ -38,6 +38,6 @@ in the working directory of your project.
 const _ = require("lodash");
 const items = [1, [2, [3, [4]]]];
 const newItems = _.flattenDeep(items);
-console.log("Hello Makan");
+console.log("Hello Amir");
 
 

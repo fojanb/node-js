@@ -12,16 +12,9 @@ ________________________
 node.js is asynchronous (non-blocking) or single-threaded
 node.js is based on modularity
 ________________________
-TYPE OF MODULES 👇
-1-Our Own written modules aka costume modules (a regular js file, nothing fancy)
+TYPEs OF MODULE 👇
+1-Our own written modules aka costume modules (a regular js file, nothing fancy)
 2-node.js's built-in modules
 3-npm modules (aka packages)
-
-
-
-
-
-
-
 
 */
