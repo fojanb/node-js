@@ -35,7 +35,7 @@ f applications based on node. js. It simply restarts the node
 application whenever it observes the changes in the file present 
 in the working directory of your project.
 */
-// const _ = require("lodash");
-// const items = [1, [2, [3, [4]]]];
-// const newItems = _.flattenDeep(items);
-// console.log("Hello Amir");
+const _ = require("lodash");
+const items = [1, [2, [3, [4]]]];
+const newItems = _.flattenDeep(items);
+console.log("Hello Amir");
