@@ -1,25 +1,23 @@
 {
   "name": "makan",
   "version": "1.0.0",
-  "description": "For Practice purposes",
-  "main": "index.js",
+  "description": "My node.js project",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fojanb/node-js.git"
+    "url": "https://github.com/fojanb/node-js"
   },
-  "author": "Fojan-Babaali",
+  "author": "Fojan Babaali",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fojanb/node-js/issues"
   },
   "homepage": "https://github.com/fojanb/node-js#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
-  },
-  "devDependencies": {
+    "lodash": "^4.17.21",
     "nodemon": "^2.0.20"
   }
 }
