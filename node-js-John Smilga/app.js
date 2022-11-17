@@ -35,9 +35,33 @@ f applications based on node. js. It simply restarts the node
 application whenever it observes the changes in the file present 
 in the working directory of your project.
 */
-const _ = require("lodash");
-const items = [1, [2, [3, [4]]]];
-const newItems = _.flattenDeep(items);
-console.log("Hello Amir");
+// const _ = require("lodash");
+// const items = [1, [2, [3, [4]]]];
+// const newItems = _.flattenDeep(items);
+// console.log("Hello Amir");
 
+// Understanding the non-blocking architecture model(event-loop,stack and callbacks)
+// console.log("First");
+// setInterval(() => console.log("Third"),4000);
+// console.log("Second");
+const http = require("http");
+const { readFile, writeFile } = require("fs");
 
+const server = http.createServer((req, res) => {
+  // User Endpoint 👉 req.url
+  // Common practice for homepage is "/"
+  if (req.url === "/") {
+    res.end("Welcome to our homepage (http://localhost:8080/)");
+  }
+  if (req.url === "/about") {
+    res.end("Welcome to our about page (http://localhost:8080/about)");
+  }
+  // Default response as below 👇
+  res.end(`<h1>Ooops!</h1>
+            <p>http://localhost:8080${req.url} does not exist in our 
+            web app</p>
+            <a href="/">Back to homepage</a>`);
+});
+server.listen(8080, () =>
+  console.log("Server listening on http://localhost:8080/ ...")
+); //The server object listens on port 8080

@@ -1,4 +1,4 @@
-// <synchronous = blocking>
+// <asynchronous = non-blocking>
 // ES6 Destructuring👇
 const { readFileSync, writeFileSync } = require("fs");
 /*Or :👇
