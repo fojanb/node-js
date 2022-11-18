@@ -14,14 +14,19 @@
             resolve(`Here is your pizza 🍕 with the ${toppings}`);
           }, 2000);
         });
-
       };
-      makePizza("pepperoni")
+      const pizzaPromise1 = makePizza("Veggi");
+      const pizzaPromise2 = makePizza("Ham & Cheese");
+      const pizzaPromise3 = makePizza("Bacon & Hame");
+      const pizzaPromise4 = makePizza("Cheese & bacon");
+
+      makePizza("Veggi")
         .then((pizza) => {
           console.log(pizza);
-          return makePizza("veggi");
         })
-        .then((pizza) => console.log(pizza));
+        
     </script>
   </body>
 </html>
+<!-- Promise() behaviour : Sequentially -->
+<!-- Promise.all() behaviour : Concurrently -->
