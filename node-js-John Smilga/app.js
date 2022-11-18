@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
     });
     return;
   }
-  // Default response as below 👇
+  // Error response as below 👇
   res.end(`<h1>Ooops!</h1>
             <p>http://localhost:8080${req.url} does not exist in our 
             web app</p>
