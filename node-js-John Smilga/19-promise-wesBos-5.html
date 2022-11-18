@@ -9,22 +9,35 @@
   <body>
     <script>
       const makePizza = (toppings) => {
+        // This function just spit out a promise of pizza, not the actual pizza
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             resolve(`Here is your pizza 🍕 with the ${toppings}`);
           }, 2000);
         });
       };
-      const pizzaPromise1 = makePizza("Veggi");
-      const pizzaPromise2 = makePizza("Ham & Cheese");
-      const pizzaPromise3 = makePizza("Bacon & Hame");
-      const pizzaPromise4 = makePizza("Cheese & bacon");
-
-      makePizza("Veggi")
+      // Big oven : Concurrently Behaviour
+      makePizza("Ham & Cheese").then((pizza) => console.log(pizza));
+      makePizza("Bacon & Ham").then((pizza) => console.log(pizza));
+      makePizza("Cheese & Bacon").then((pizza) => console.log(pizza));
+      makePizza("Veggi").then((pizza) => {
+        console.log(pizza);
+      });
+      // Small oven : Sequentially Behaviour
+      makePizza("Ham & Cheese")
         .then((pizza) => {
           console.log(pizza);
+          return makePizza("Bacon & Ham");
         })
-        
+        .then((pizza) => {
+          console.log(pizza);
+          return makePizza("Cheese & bacon");
+        })
+        .then((pizza) => {
+          console.log(pizza);
+          return makePizza("Veggi");
+        })
+        .then((pizza) => console.log(pizza));
     </script>
   </body>
 </html>
