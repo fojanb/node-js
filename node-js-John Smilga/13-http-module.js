@@ -6,9 +6,11 @@ const server = http.createServer((req, res) => {
   // Common practice for homepage is "/"
   if (req.url === "/") {
     res.end("Welcome to our homepage (http://localhost:8080/)");
+    return;
   }
   if (req.url === "/about") {
     res.end("Welcome to our about page (http://localhost:8080/about)");
+    return;
   }
   // Default response as below 👇
   res.end(`<h1>Ooops!</h1>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      const makePizza = (toppings) => {
+        const pizzaPromise = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(`Here is your pizza 🍕 with the ${toppings}`);
+          }, 2000);
+        });
+        return pizzaPromise;
+      };
+      const pepperoniPromise = makePizza("pepperoni");
+      console.log(pepperoniPromise);
+      pepperoniPromise.then((pizza) => console.log(pizza));
+    </script>
+  </body>
+</html>
