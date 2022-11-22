@@ -9,6 +9,7 @@ YY...ZZ...XX
 ______________________________
 CommonJS, every file in node is module (by default)
 module -> Encapsulated code (share minimum)
+______________________________
 ___<SOME IMPORTANT MODULES (node and npm)>___
 Http (built-in node.js module) -> For creating a server
 fs (built-in node.js module)   -> For CRUD files

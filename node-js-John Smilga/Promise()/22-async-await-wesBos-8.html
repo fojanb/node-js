@@ -31,23 +31,22 @@ promise based function and it will sort of temporarily pause that function from
 running until that promise is resolved.
 ---------------------------------- 
 IMPORTANT TOPICS :
-Promise((resolve,reject) => {----})
-resolve()
-reject()
+1-Promise((resolve,reject) => {----})
+2-resolve()
+3-reject()
 ****
-.then(callBack function on resolve(data))
-.catch(callBack function on reject(err))
+4-.then(callBack function on resolve(data))
+5-.catch(callBack function on reject(err))
 ****
-fetch
-async
-await
+6-fetch
+7-async
+8-await
 -----------------------------
-awit-async is the replacement for then-catch.
-(await) -> Works only inside async functions
-(async) -> Essentially whenever you have a function, put 
+(awit-async) is the replacement for (then-catch).
+(await) 👉 Works only inside async functions
+(async) 👉 Essentially whenever you have a function, put 
 the word async in front of it and that will allow you
 to do awaiting inside of it.
 
 The word “async” before a function means one simple thing: a function always returns a promise. 
-
 -->

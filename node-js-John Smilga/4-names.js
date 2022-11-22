@@ -1,6 +1,6 @@
-// secret is going to be a LOCAL var for 4-names.js
+// secret is going to be a LOCAL variable for 4-names.js
 const secret = "SUPER SECRET";
-// fojan and makan are SHARABLE vars to the whole app
+// fojan and makan are SHARABLE variables to the whole app
 const fojan = "Fojan";
 const makan = "Makan";
 

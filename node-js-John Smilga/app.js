@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
         res.end(result);
       }
     });
-
+    // 👉 result =  ./content/Home/index.html
     return;
   }
   if (req.url === "/about") {
