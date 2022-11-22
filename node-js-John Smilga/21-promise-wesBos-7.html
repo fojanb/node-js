@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      let data = [];
+      const handleError = (err) => {
+        console.log(err);
+      };
+      const getData = (pizza) => {
+        console.log(pizza);
+        data.push(pizza);
+      };
+      const makePizza = (toppings) => {
+        // This function only spits out a PROMISE of a pizza, not the "ACTUAL" pizza (data)
+        return new Promise((resolve, reject) => {
+          // Handling error in promises
+          if (toppings.includes("pineapple")) {
+            reject("Seriously? Get out 🍍");
+          }
+          setTimeout(() => {
+            resolve(`Here is your pizza 🍕 with the ${toppings.join(",")}`);
+          }, 2000);
+        });
+      };
+      makePizza(["ham", "olive"])
+        .then((pizza) => getData(pizza))
+        .catch((err) => handleError(err));
+
+      makePizza(["pineapple", "olive"])
+        .then((pizza) => getData(pizza))
+        .catch((err) => handleError(err));
+    </script>
+  </body>
+</html>
+<!-- 
+Promise.all():
+To reiterate, Promise.all() will take all of 
+your promises and will only resolve when all 3 of the
+sub-promises have been resolved themselves. 
+
+SIDE NOTES : 
+.then() can show -> resolve (data)
+.catch() can show -> reject (error)
+
+.then() will only run when the promise resolves successfully, 
+and the catch will only run if the promise doesn't go successfully.
+-->

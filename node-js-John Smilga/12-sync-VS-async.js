@@ -43,3 +43,6 @@ readFile("./content/first.txt", "utf8", (err, result) => {
   });
 });
 console.log("Starting a new one...");
+
+/* Example : setTimeout() is an asynchronous function, meaning that the timer 
+function will not pause execution of other functions in the functions stack.*/

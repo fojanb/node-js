@@ -14,9 +14,9 @@
             resolve(`Here is your pizza 🍕 with the ${toppings}`);
           }, 2000);
         });
-        return pizzaPromise;
       };
       console.log("First");
+      // Nested promises
       makePizza("pepperoni")
         .then((pizza) => {
           console.log(pizza);
@@ -28,3 +28,6 @@
     </script>
   </body>
 </html>
+<!-- Promise() behaviour : Sequentially -->
+<!-- Promise.all() behaviour : Concurrently -->
+
