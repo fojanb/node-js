@@ -9,15 +9,16 @@
   <body>
     <script>
       const matrix = () => {
-        for (let i = 0; i <100; i++) {
-          for (let j = 0; j <100; j++) {
-            console.log(`${i}-${j}`);
-          }
-        }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(`hi`);
+          }, 2000);
+        });
       };
-      const go = async () => {
+      const go = () => {
         console.log("Starting");
-        await matrix();
+        matrix().then((data) => console.log(data));
+        // await matrix().then((data) => console.log(data));
         console.log("Running");
       };
       go();
@@ -40,4 +41,13 @@ reject()
 fetch
 async
 await
+-----------------------------
+awit-async is the replacement for then-catch.
+(await) -> Works only inside async functions
+(async) -> Essentially whenever you have a function, put 
+the word async in front of it and that will allow you
+to do awaiting inside of it.
+
+The word “async” before a function means one simple thing: a function always returns a promise. 
+
 -->

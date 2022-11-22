@@ -28,13 +28,21 @@
           }, 2000);
         });
       };
-      makePizza(["ham", "olive"])
-        .then((pizza) => getData(pizza))
-        .catch((err) => handleError(err));
+      // ****Old fashion promise(chaining then and catch)****
+      // makePizza(["ham", "olive"])
+      //   .then((pizza) => getData(pizza))
+      //   .catch((err) => handleError(err));
 
-      makePizza(["pineapple", "olive"])
-        .then((pizza) => getData(pizza))
-        .catch((err) => handleError(err));
+      // makePizza(["pineapple", "olive"])
+      //   .then((pizza) => getData(pizza))
+      //   .catch((err) => handleError(err));
+
+      // ****Instead of chaining up then and catch we could use async-await****
+      const makeDinner = async () => {
+        const pizza1 = await makePizza(["ham", "olive"]);
+        console.log(pizza1);
+      };
+      makeDinner();
     </script>
   </body>
 </html>
