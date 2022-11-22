@@ -41,6 +41,7 @@ IMPORTANT TOPICS :
 6-fetch
 7-async
 8-await
+9-try-catch block
 -----------------------------
 (awit-async) is the replacement for (then-catch).
 (await) 👉 Works only inside async functions
@@ -49,4 +50,12 @@ the word async in front of it and that will allow you
 to do awaiting inside of it.
 
 The word “async” before a function means one simple thing: a function always returns a promise. 
+
+
+      Promise()
+      /     \
+then-catch  async-await
+
+await will return the final result, it could be a result of an error or a result of resolve
+
 -->
