@@ -1,8 +1,11 @@
-const EventEmitter = require("events");
-const cutomeEmitter = new EventEmitter();
-// on ---> listen for an event
-// emit--> emit an event
-cutomeEmitter.on("response", () => {
-  console.log("data recieved");
+const http = require("http");
+// const server = http.createServer((req, res) => {
+//   res.end("Welcome");
+// });
+
+// Using EventEmitter API
+const server = http.createServer();
+server.on("request", (req, res) => {
+  res.end(`Welcome to ${req.url}`);
 });
-cutomeEmitter.emit("response");
+server.listen(5000)
