@@ -1,11 +1,11 @@
 /*
-🔵 The Built-in HTTP Module
+🔵The Built-in HTTP Module
 Node.js has a built-in module called HTTP, which allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP).
 To include the HTTP module, use the require() method:
 
 var http = require('http');
 
-🔵 Node.js as a Web Server
+🔵Node.js as a Web Server
 The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.
 Use the createServer() method to create an HTTP server:
 
@@ -26,7 +26,7 @@ Initiate demo_http.js:
 C:\Users\Your Name>node demo_http.js
 If you have followed the same steps on your computer, you will see the same result as the example: http://localhost:8080
 
-🔵 Add an HTTP Header
+🔵Add an HTTP Header
 If the response from the HTTP server is supposed to be displayed as HTML, you should include an HTTP header with the correct content type:
 
 👉Example
@@ -39,7 +39,7 @@ http.createServer(function (req, res) {
 
 The first argument of the res.writeHead() method is the status code, 200 means that all is OK, the second argument is an object containing the response headers.
 
-🔵 Read the Query String
+🔵Read the Query String
 The function passed into the http.createServer() has a req argument that represents the request from the client, as an object (http.IncomingMessage object).
 This object has a property called "url" which holds the part of the url that comes after the domain name:
 
@@ -67,7 +67,7 @@ http://localhost:8080/winter
 Will produce this result:
 /winter
 
-🔵 Split the Query String
+🔵Split the Query String
 There are built-in modules to easily split the query string into readable parts, such as the URL module.
 
 👉Example

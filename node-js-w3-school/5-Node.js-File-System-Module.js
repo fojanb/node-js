@@ -1,5 +1,5 @@
 /*
-🔵 Node.js as a File Server
+🔵Node.js as a File Server
 The Node.js file system module allows you to work with the file system on your computer.
 To include the File System module, use the require() method:
 
@@ -12,7 +12,7 @@ Common use for the File System module:
 ⭐Delete files
 ⭐Rename files
 _____________________________________________
-🔵 Read Files
+🔵Read Files
 The fs.readFile() method is used to read files on your computer.
 
 🍁fs.readFile()
@@ -47,7 +47,7 @@ Initiate demo_readfile.js:
 C:\Users\Your Name>node demo_readfile.js
 If you have followed the same steps on your computer, you will see the same result as the example: http://localhost:8080
 _____________________________________________
-🔵 Create Files
+🔵Create Files
 The File System module has methods for creating new files:
 
 🍇fs.appendFile()
@@ -87,7 +87,7 @@ fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) {
   console.log('Saved!');
 });
 _____________________________________________
-🔵 Update Files
+🔵Update Files
 The File System module has methods for updating files:
 
 🍊fs.appendFile()
@@ -116,7 +116,7 @@ fs.writeFile('mynewfile3.txt', 'This is my text', function (err) {
 });
 
 _____________________________________________
-🔵 Delete Files
+🔵Delete Files
 To delete a file with the File System module,  use the fs.unlink() method.
 
 🍒fs.unlink()
@@ -133,7 +133,7 @@ fs.unlink('mynewfile2.txt', function (err) {
 });
 
 _____________________________________________
-🔵 Rename Files
+🔵Rename Files
 To rename a file with the File System module,  use the fs.rename() method.
 
 🍓fs.rename()
@@ -151,18 +151,8 @@ fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
 
 
 _____________________________________________
-🔵 Upload Files
+🔵Upload Files
 You can also use Node.js to upload files to your computer.
 Read how in our Node.js Upload Files chapter.
-
-
-
-
-
-
-
-
-
-
 
 */
