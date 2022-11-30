@@ -14,6 +14,9 @@ Common use for the File System module:
 _____________________________________________
 🔵 Read Files
 The fs.readFile() method is used to read files on your computer.
+
+🍁fs.readFile()
+
 Assume we have the following HTML file (located in the same folder as Node.js):
 
 demofile1.html
@@ -27,7 +30,7 @@ demofile1.html
 
 Create a Node.js file that reads the HTML file, and return the content:
 
-👉Example
+🍁👉Example
 var http = require('http');
 var fs = require('fs');
 http.createServer(function (req, res) {
