@@ -37,10 +37,63 @@ http.createServer(function (req, res) {
   res.end();
 }).listen(8080);
 
+The first argument of the res.writeHead() method is the status code, 200 means that all is OK, the second argument is an object containing the response headers.
 
+🔵 Read the Query String
+The function passed into the http.createServer() has a req argument that represents the request from the client, as an object (http.IncomingMessage object).
+This object has a property called "url" which holds the part of the url that comes after the domain name:
 
+demo_http_url.js
 
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write(req.url);
+  res.end();
+}).listen(8080);
 
+Save the code above in a file called "demo_http_url.js" and initiate the file:
+
+Initiate demo_http_url.js:
+
+C:\Users\Your Name>node demo_http_url.js
+If you have followed the same steps on your computer, you should see two different results when opening these two addresses:
+
+http://localhost:8080/summer
+Will produce this result:
+/summer
+
+http://localhost:8080/winter
+Will produce this result:
+/winter
+
+🔵 Split the Query String
+There are built-in modules to easily split the query string into readable parts, such as the URL module.
+
+👉Example
+Split the query string into readable parts:
+
+var http = require('http');
+var url = require('url');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  var q = url.parse(req.url, true).query;
+  var txt = q.year + " " + q.month;
+  res.end(txt);
+}).listen(8080);
+
+Save the code above in a file called "demo_querystring.js" and initiate the file:
+
+Initiate demo_querystring.js:
+
+C:\Users\Your Name>node demo_querystring.js
+The address:
+
+http://localhost:8080/?year=2017&month=July
+
+Will produce this result:
+
+2017 July
 
 
 

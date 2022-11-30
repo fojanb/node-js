@@ -1,8 +1,6 @@
 const http = require("http");
-const server = http.createServer((req, res) => {
-  res.write("<h1>hello makan</h1>");
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('Hello World!');
   res.end();
-});
-server.listen(8000, () => {
-  console.log("Listening on port http://localhost:8000");
-});
+}).listen(8080);
