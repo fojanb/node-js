@@ -88,7 +88,7 @@ _____________________________________________
 The File System module has methods for updating files:
 
 🍊fs.appendFile()
-🍅fs.writeFile()
+🍄fs.writeFile()
 
 The fs.appendFile() method appends the specified content at the end of the specified file:
 
@@ -103,7 +103,7 @@ fs.appendFile('mynewfile1.txt', ' This is my text.', function (err) {
 
 The fs.writeFile() method replaces the specified file and content:
 
-🍅👉Example
+🍄👉Example
 Replace the content of the file "mynewfile3.txt":
 
 var fs = require('fs');
