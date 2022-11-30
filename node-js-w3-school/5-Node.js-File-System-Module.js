@@ -112,8 +112,45 @@ fs.writeFile('mynewfile3.txt', 'This is my text', function (err) {
   console.log('Replaced!');
 });
 
+_____________________________________________
+🔵 Delete Files
+To delete a file with the File System module,  use the fs.unlink() method.
+
+🍒fs.unlink()
+
+The fs.unlink() method deletes the specified file:
+
+🍒👉Example
+Delete "mynewfile2.txt":
+
+var fs = require('fs');
+fs.unlink('mynewfile2.txt', function (err) {
+  if (err) throw err;
+  console.log('File deleted!');
+});
+
+_____________________________________________
+🔵 Rename Files
+To rename a file with the File System module,  use the fs.rename() method.
+
+🍓fs.rename()
+
+The fs.rename() method renames the specified file:
+
+🍓👉Example
+Rename "mynewfile1.txt" to "myrenamedfile.txt":
+
+var fs = require('fs');
+fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
+  if (err) throw err;
+  console.log('File Renamed!');
+});
 
 
+_____________________________________________
+🔵 Upload Files
+You can also use Node.js to upload files to your computer.
+Read how in our Node.js Upload Files chapter.
 
 
 
