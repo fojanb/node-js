@@ -1,6 +1,7 @@
 // <asynchronous = non-blocking>
 const { readFile, writeFile } = require("fs");
-// CAllBACK HELL 👇 Solution to the callback hell 👉  Promise()
+// ____________________________________________________________
+// CAllBACK HELL 👇 Solution to the callback hell (nested callback)👉Promise()
 readFile("./content/first.txt", "utf8", (err, result) => {
   if (err) {
     console.log(err);

@@ -15,6 +15,6 @@ ________________________
 TYPEs OF MODULE 👇
 1-Our own written modules aka costume modules (a regular js file, nothing fancy)
 2-node.js's built-in modules
-3-npm modules (aka packages)
+3-npm modules (aka packages) -> need to be install inside package.json
 
 */

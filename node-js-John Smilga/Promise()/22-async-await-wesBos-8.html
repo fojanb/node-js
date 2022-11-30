@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const matrix = () => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(`hi`);
+          }, 2000);
+        });
+      };
+      const go = () => {
+        console.log("Starting");
+        matrix().then((data) => console.log(data));
+        // await matrix().then((data) => console.log(data));
+        console.log("Running");
+      };
+      go();
+    </script>
+  </body>
+</html>
+<!--
+What async await allows us to do is put the keyword await in front of a
+promise based function and it will sort of temporarily pause that function from
+running until that promise is resolved.
+---------------------------------- 
+IMPORTANT TOPICS :
+1-Promise((resolve,reject) => {----})
+2-resolve()
+3-reject()
+****
+4-.then(callBack function on resolve(data))
+5-.catch(callBack function on reject(err))
+****
+6-fetch
+7-async
+8-await
+9-try-catch block
+*async-await need a wrapper function.
+-----------------------------
+(awit-async) is the replacement for (then-catch).
+(await) 👉 Works only inside async functions
+(async) 👉 Essentially whenever you have a function, put 
+the word async in front of it and that will allow you
+to do awaiting inside of it.
+
+The word “async” before a function means one simple thing: a function always returns a promise. 
+
+
+      Promise()
+      /     \
+then-catch  async-await
+
+*await will return the final result, it could be a result of an error or a result of resolve
+*nested .then(), only need one .catch()
+-->
