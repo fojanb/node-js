@@ -90,12 +90,12 @@ _____________________________________________
 🔵Update Files
 The File System module has methods for updating files:
 
-🍊fs.appendFile()
+:mandarin:fs.appendFile()
 🍄fs.writeFile()
 
 The fs.appendFile() method appends the specified content at the end of the specified file:
 
-🍊👉Example
+:mandarin:👉Example
 Append "This is my text." to the end of the file "mynewfile1.txt":
 
 var fs = require('fs');
