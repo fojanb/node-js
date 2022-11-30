@@ -1,11 +1,11 @@
 /*
-## The Built-in HTTP Module
+🔵 The Built-in HTTP Module
 Node.js has a built-in module called HTTP, which allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP).
 To include the HTTP module, use the require() method:
 
 var http = require('http');
 
-## Node.js as a Web Server
+🔵 Node.js as a Web Server
 The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.
 Use the createServer() method to create an HTTP server:
 
@@ -26,7 +26,7 @@ Initiate demo_http.js:
 C:\Users\Your Name>node demo_http.js
 If you have followed the same steps on your computer, you will see the same result as the example: http://localhost:8080
 
-## Add an HTTP Header
+🔵 Add an HTTP Header
 If the response from the HTTP server is supposed to be displayed as HTML, you should include an HTTP header with the correct content type:
 
 👉Example
