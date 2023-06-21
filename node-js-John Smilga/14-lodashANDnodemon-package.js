@@ -87,5 +87,5 @@ console.log("Hello Amir");
 console.log(newItems);
 
 // We used 'npm install nodemon -D' or 'npm install nodemon --save-dev' and it will be installed
-// as devDependencies, it means that we only gonna use it in development environment not 
-// the production environment which need more serious tools than nodemon.
+// as devDependencies, it means that we only gonna use it in 'development environment' not 
+// the 'production environment' which need more serious tools than nodemon to run our application.
