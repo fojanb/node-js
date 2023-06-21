@@ -61,17 +61,18 @@ you basically install all the rest of npm dependencies that comes with that loda
 👉FACT : Note that we never push 'node_modules' folder onto github. Always 'git ignore' that folder.
 Since it is a big file in terms of size.
 If you want to run (i.e. npm start in react app) a forked npm project repository from github
-you must type npm install in the terminal to install all of the dependencies that comes with that
+you must type npm install in the terminal to install all of the dependencies (node_modules folder) that comes with that
 project and already git ignored by the author of that repository. 
 Other than that you will run into a nasty error.
 
 👉FACT : At the end of the day, why we need package.json file ? 2 reasons:
 1-Because we need to provide information about our project. and this file will take care of those
 information.
-2-When we clone(fork) a github repository that used npm packages, of course we must 'npm install'
+2-When we clone(fork) a github repository that have used npm packages, of course we must 'npm install'
 in the terminal. That command, will serach through the package.json file line by line and will check
-what dependendies have been used on that project and then will install all of them on your machine to help
-helping run the project.
+what dependendies have been used on that project and then will install all of them (node_modules folder) on your machine to help
+helping run the project (node_modules folder will brought back to the project by
+'npm install' command).
 ___________________________
 
 👉FACT : Nodemon is a popular tool that is used for the development 
