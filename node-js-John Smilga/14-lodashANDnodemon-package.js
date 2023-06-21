@@ -63,6 +63,10 @@ If you want to run (i.e. npm start in react app) a forked npm project repository
 you must type npm install in the terminal to install all of the dependencies that comes with that
 project and already git ignored by the author of that repository. 
 Other than that you will run into a nasty error.
+
+👉FACT : At the end of the day, why we need package.json file ?
+Because we need to provide information about our project. and this file will take care of those
+information.
 ___________________________
 
 👉FACT : Nodemon is a popular tool that is used for the development 
