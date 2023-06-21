@@ -30,7 +30,9 @@ readFile("./content/first.txt", "utf8", (err, result) => {
 // 🍄fs module's functions are 2 types : Async and Sync
 // 🍄Promise(), Asynchronousity, callbacks, async/await keywords
 // 🍄Asynchronousity === non-blocking (execute code lines up to down BUT whenever needed 
-// 🍄you can jump over of some lines of codes) 
+// 🍄you can jump over of some lines of codes (aka off-loading those lines of codes 
+//    that have asynchronous behavoiur.) 
 // 🍄Synchronousity === blocking (execute code lines from up to down)
+// 🍄Asynchromous approach is faster than the synchronous approach
 
  
