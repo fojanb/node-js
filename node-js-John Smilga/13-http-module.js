@@ -2,6 +2,7 @@ const http = require("http");
 const { readFile, writeFile } = require("fs");
 
 const server = http.createServer((req, res) => {
+  // req and res both are objects.
   // User Endpoint 👉 req.url
   // Common practice for homepage is "/"
   if (req.url === "/") {

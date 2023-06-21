@@ -22,7 +22,7 @@ ________________________
 🍀 Asynchronousity uses callback functions (aka eventHandlers)
 🍀 Callback function === eventHandlers 
 ________________________
-TYPEs OF MODULE 👇
+TYPEs OF MODULE (3 types) 👇
 1-Our own written modules aka costume modules (a regular js file, nothing fancy)
 2-node.js's built-in modules -> i.e. HTTP module
 3-npm modules (aka packages) -> need to be install inside package.json
