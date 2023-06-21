@@ -45,8 +45,8 @@ Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
 
 👉FACT : If you want to run (i.e. npm start in react app) a forked npm project repository from github
-you must type npm install in the terminal to install all of the dependencies that comes with that
-project and already git ignored. other than that you will run into a nasty error.
+you must type 'npm install' in the terminal to install all of the dependencies that comes with that
+project and already git ignored. Other than that you will run into a nasty error.
 
 👉FACT : Note that React App will create package.json for you automatically, 
 no need to 'npm  init'.
@@ -59,14 +59,19 @@ npm packages (aka dependencies) in order to create his own npm package. so by do
 you basically install all the rest of npm dependencies that comes with that lodash package.
 
 👉FACT : Note that we never push 'node_modules' folder onto github. Always 'git ignore' that folder.
+Since it is a big file in terms of size.
 If you want to run (i.e. npm start in react app) a forked npm project repository from github
 you must type npm install in the terminal to install all of the dependencies that comes with that
 project and already git ignored by the author of that repository. 
 Other than that you will run into a nasty error.
 
-👉FACT : At the end of the day, why we need package.json file ?
-Because we need to provide information about our project. and this file will take care of those
+👉FACT : At the end of the day, why we need package.json file ? 2 reasons:
+1-Because we need to provide information about our project. and this file will take care of those
 information.
+2-When we clone(fork) a github repository that used npm packages, of course we must 'npm install'
+in the terminal. That command, will serach through the package.json file line by line and will check
+what dependendies have been used on that project and then will install all of them on your machine to help
+helping run the project.
 ___________________________
 
 👉FACT : Nodemon is a popular tool that is used for the development 
