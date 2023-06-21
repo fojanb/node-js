@@ -1,8 +1,9 @@
 /*
-
 👉FACT : npm comes with node (^_^)
 How to check npm version on windows? open CLI and tyope 'npm -v'
 How to check node version on windows? open CLI and tyope 'node -v'
+___________________________
+📌Package in npm : is reusable JavaScript codes, simple enough. 
 ___________________________
 app.js is the ROOT module :
     app.js     
