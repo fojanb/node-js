@@ -21,3 +21,9 @@ const server = http.createServer((req, res) => {
 server.listen(8080, () =>
   console.log("Server listening on http://localhost:8080/ ...")
 ); //The server object listens on port 8080
+// _________________________________________________________
+// 🍄In node.js : Server means HTTP module
+// 🍄Creating my own server and setting up the APIs
+// 🍄When user types a URL and hits the Enter key : This means a GET request
+// 🍄When user fills out a form input and hits submit button : This means a POST request
+// 🍄90% of the requests that user sends to the server are GET request.  
