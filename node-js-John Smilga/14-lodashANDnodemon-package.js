@@ -23,12 +23,18 @@ There are two types of methods to install a PACKAGE
 ___________________________
 -Local Dependencies 👉 Use it only in this particular project.
 📌i.e. npm i <packageName>
-📌i.e. sudo i <packageName> (mac)
+📌i.e. sudo npm i <packageName> (mac)
 -Global Dependencies 👉 Use it in any project.
 📌i.e. npm install -g <packageName>
-📌i.e. sudo install -g <packageName> (mac)
+📌i.e. sudo npm install -g <packageName> (mac)
+
+🍄Note that -> node i === node install
 ___________________________
-npm init:
+📌package.json 👉 Manifest file (stores important info about project/package)
+-manual approach (create package.json in the *root directory*, create properties etc)
+-npm init (step by step, press enter to skip)
+-npm init -y (everything default)
+📌npm init:
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
 
@@ -38,7 +44,7 @@ and exactly what they do.
 Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
 
-If you want to run (i.e. npm start in react app) a forked npm repository from github
+👉FACT : If you want to run (i.e. npm start in react app) a forked npm repository from github
 you must type npm install in the terminal to install all of the dependencies that comes with that
 project and already git ignored. other than that you will run into a nasty error.
 ___________________________
