@@ -1,7 +1,7 @@
-// <asynchronous = non-blocking>
+// <Asynchronous = non-blocking>
 const { readFile, writeFile } = require("fs");
 // ____________________________________________________________
-// CAllBACK HELL 👇 Solution to the callback hell (nested callback)👉Promise()
+// CAllBACK HELL 👇 Solution to the callback hell (nested callback)👉Promise();
 readFile("./content/first.txt", "utf8", (err, result) => {
   if (err) {
     console.log(err);
@@ -27,6 +27,10 @@ readFile("./content/first.txt", "utf8", (err, result) => {
     );
   });
 });
-
+// 🍄fs module's functions are 2 types : Async and Sync
+// 🍄Promise(), Asynchronousity, callbacks, async/await keywords
+// 🍄Asynchronousity === non-blocking (execute code lines up to down BUT whenever needed 
+// 🍄you can jump over of some lines of codes) 
+// 🍄Synchronousity === blocking (execute code lines from up to down)
 
  

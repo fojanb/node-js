@@ -3,6 +3,7 @@ const os = require("os");
 const user = os.userInfo();
 // Let's returns the system uptime in number of seconds 👇
 const upTime = os.uptime();
+// Let's make an object via OS module properties 👇
 const currentOS = {
   name: os.type(),
   release: os.release(),

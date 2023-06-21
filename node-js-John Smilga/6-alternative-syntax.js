@@ -6,6 +6,7 @@ const person = {
 module.exports.myData = { items, person };
 /*
 // Key-Value pair👇
+(2 Levels)
 module.exports.KEY = VALUE;
 exports = {
   myData : {
@@ -19,7 +20,7 @@ exports = {
 
 /*
 // Key-Value pair👇 
-
+(1 Level)
 module.exports.items = items;
 module.exports.person = person;
 

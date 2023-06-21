@@ -7,7 +7,7 @@ const makan = "Makan";
 module.exports.name = { fojan, makan };
 
 /* 
-
+_____________________________________________________________________________
 [-year]-------CommonJS------->[2015]<-----------ES6-------[+year]
              /    |    \                      /   |   \
             /     |     \                    /    |    \
@@ -16,4 +16,10 @@ var keyword             require           const,
                                         arrow function,
                                         Array.map(),
                                         destructuring
+
+🍄 CommonJS -> module.exports = sayHi; === ES6 -> export default sayHi; 
+                                                export default {sayHi};
+🍄 CommonJS -> module.exports = {makan,amir}; === ES6 -> export {makan,amir};
+_____________________________________________________________________________
+
 */
