@@ -74,6 +74,10 @@ what dependendies have been used on that project and then will install all of th
 helping run the project (node_modules folder will brought back to the project by
 'npm install' command).
 ___________________________
+👉 Note that 'npm start' and 'npm run start' are the same.
+👉 Note that 'package-lock.json' will be created at the same time of node_modules creation.
+👉 We only create package.json file via npm init -y or npm init 
+___________________________
 
 👉FACT : Nodemon is a popular tool that is used for the development 
 of applications based on node. js. It simply restarts the node 
