@@ -28,7 +28,7 @@ ___________________________
 📌i.e. npm install -g <packageName>
 📌i.e. sudo npm install -g <packageName> (mac)
 
-🍄Note that -> node i === node install
+🍄Note that -> npm i === npm install
 ___________________________
 📌package.json 👉 Manifest file (stores important info about project/package)
 -manual approach (create package.json in the *root directory*, create properties etc)

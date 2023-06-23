@@ -28,7 +28,8 @@ readFile("./content/first.txt", "utf8", (err, result) => {
   });
 });
 // 🍄fs module's functions are 2 types : Async and Sync
-// 🍄Promise(), Asynchronousity, callbacks, async/await keywords, off-loading
+// 🍄Promise(), Asynchronousity(non blocking),Synchronous(blocking) callbacks, async/await keywords, 
+//  off-loading, try-catch chaining
 // 🍄Asynchronousity === non-blocking (execute code lines up to down BUT whenever needed 
 // 🍄you can jump over of some lines of codes (aka off-loading those lines of codes 
 //  that have asynchronous behavoiur) 

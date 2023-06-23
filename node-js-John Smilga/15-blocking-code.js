@@ -1,5 +1,6 @@
 const http = require("http");
 const { readFile, writeFile } = require("fs");
+const { result } = require("lodash");
 
 const server = http.createServer((req, res) => {
   // User Endpoint 👉 req.url
@@ -29,6 +30,26 @@ const server = http.createServer((req, res) => {
       } else {
         res.end(result);
       }
+    });
+    return;
+  }
+  if (req.url === "/contact") {
+    readFile("./content/Contact/contact.html", "utf8", (err, result) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      res.end(result);
+    });
+    return;
+  }
+  if (req.url === "/services") {
+    readFile("./content/Services/services.html", "utf8", (err, result) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      res.end(result);
     });
     return;
   }
