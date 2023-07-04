@@ -2,7 +2,7 @@
   "name": "2-express-tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "express.js",
   "scripts": {
     "start": "nodemon express.js"
   },
