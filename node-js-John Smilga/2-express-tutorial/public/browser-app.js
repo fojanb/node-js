@@ -4,19 +4,23 @@ const links = document.querySelector(".links");
 navToggle.addEventListener("click", function () {
   links.classList.toggle("show-links");
 });
-const useData = (products) => {
+const renderProducts = (products) => {
   products.map((product) => {
     let prod = document.createElement("div");
     prod.innerHTML = `<a href="/api/products/${product.id}">${product.name}</a>`;
     document.body.append(prod);
   });
 };
-const fetchData = async () => {
+const getProducts = async () => {
   const res = await fetch("/api/products");
-  const data = await res.json();
-  useData(data);
+  const products = await res.json();
+  renderProducts(products);
 };
+const getProduct = async () => {
+
+
+}
 
 window.addEventListener("load", () => {
-  fetchData();
+  getProducts();
 });
