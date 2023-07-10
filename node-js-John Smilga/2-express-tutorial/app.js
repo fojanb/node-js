@@ -43,11 +43,37 @@ app.post("/api/postman/people", (req, res) => {
   const { love } = req.body;
   res.status(200).json({ status: true, data: [...people, love] });
 });
-// PUT
-app.put("/api/people/:id",(req,res) => {
-  const {id} = req.params;
-
-})
+// PUT handled by Postman
+// In the following codes we are using body and route params
+app.put("/api/people/:id", (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  let target_person = people.find((person) => person.id === Number(id));
+  if (!target_person) {
+    return res
+      .status(404)
+      .json({ success: false, msg: `No user with id ${id} is existed...` });
+  }
+  const newPeople = people.map((person) => {
+    if (person.id === Number(id)) {
+      person.name = name;
+    }
+    return person;
+  });
+  res.status(200).json({ update: true, data: newPeople });
+});
+// DELETE
+app.delete("/api/people/:id", (req, res) => {
+  const { id } = req.params;
+  let target_person = people.find((person) => person.id === Number(id));
+  if (!target_person) {
+    return res
+      .status(404)
+      .json({ success: false, msg: `No user with id ${id} is existed...` });
+  }
+  const newPeople = people.filter((person) => person.id === Number(id));
+  res.status(200).json({ update: true, data: newPeople });
+});
 /* POST - two flavors : for testing the post method we have two flavors 1-using Postman
 or Insomnia to test the Post request- Or 2-making a working application such as what
 we did here - make a login form (also we are going to show 2 approaches for this one(axios and
@@ -62,10 +88,10 @@ app.listen(PORT, () =>
 );
 
 // Recap :
-// GET    👉 Read Data
-// POST   👉 Sending Data to Insert it in  (needs body)
-// PUT    👉 Update(edit) Data
-// DELETE 👉 Delete Data
+// 🌼GET    👉 Read Data
+// 🌼POST   👉 Sending Data to Insert it in  (needs body)
+// 🌼PUT    👉 Update(edit) Data
+// 🌼DELETE 👉 Delete Data
 
-// req.params 👉(:) params
-// req.query  👉(?) query
+// 🌼req.params 👉(:) params
+// 🌼req.query  👉(?) query
