@@ -5,7 +5,7 @@ const PORT = 5000;
 app.use(express.static("./public"));
 // HTTP method that all browsers perform by default === "GET"
 app.get("/api/people", (req, res) => {
-  res.json(people);
+  res.status(200).json({ people: people, products: products });
 });
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
