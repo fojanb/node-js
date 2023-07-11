@@ -1,7 +1,9 @@
 // Performing GET,POST,PUT and DELETE http methods on an array (i.e. people)
 const express = require("express");
+// Create a server :
 const app = express();
 const { people } = require("./data");
+// Add a port :
 const PORT = 5050;
 
 // 🌼^🌼^🌼^🌼^🌼
