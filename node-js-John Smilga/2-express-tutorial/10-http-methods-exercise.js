@@ -8,7 +8,7 @@ const PORT = 5050;
 // express's built-in middleware :
 // Static assets:
 app.use(express.static("./methods-public"));
-// Parse form data: ()
+// Parse form data:
 app.use(express.urlencoded({ extended: false }));
 // Parse json:
 app.use(express.json());
