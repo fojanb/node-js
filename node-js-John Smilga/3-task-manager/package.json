@@ -1,0 +1,20 @@
+{
+  "name": "3-task-manager",
+  "version": "1.0.0",
+  "description": "What we will learn in this project ?\r - How to setup and connect to the cloud database ?\r - How to perform all the CRUD operations ? (CRUD is fundamental to any application)\r - You are going to take care of both the frontend and the backend of this project\r - Let me stress something: this is not your typical to-do-list app that stores data \r   on the local storage. Instead, we are wroking with the cloud.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.2"
+  }
+}
