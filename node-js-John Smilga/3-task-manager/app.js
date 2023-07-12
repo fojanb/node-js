@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 const tasksRoute = require("./routes/tasks");
-// Set up the statics file:
+// Middleware:
+app.use(express.json());
 app.use("/api/v1/tasks", tasksRoute);
 // app.get("/api/v1/tasks")        -Get all tasks
 // app.get("/api/v1/tasks/:id")    -Get a single task

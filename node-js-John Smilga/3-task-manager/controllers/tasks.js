@@ -1,12 +1,22 @@
+const taskList = require("../taskList");
+const generateID = () => {
+  return Math.random();
+};
 const getTasks = (req, res) => {
-  res.send("Get all tasks");
+  res.status(200).json({ success: true, taskList: taskList });
 };
 const getTask = (req, res) => {
   const { id } = req.params;
   res.send(`Get one task with id : ${id}`);
 };
 const postTask = (req, res) => {
-  res.send(`Task is added.`);
+  if (!req.body.task) {
+    res.status(404).json({ success: false, msg: "Please provide a task" });
+  } else {
+    let newTask = { id: generateID(), task: req.body.task };
+    taskList.push(newTask);
+    res.status(200).json({ success: true, taskList: taskList });
+  }
 };
 const patchTask = (req, res) => {
   const { id } = req.params;
