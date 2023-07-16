@@ -1,8 +1,10 @@
-const connection = require("mongoose");
-const connectionString =
-  "mongodb+srv://Makan:<password>@task-manager.s6bxdu1.mongodb.net/";
+const mongoose = require("mongoose");
 
-
-
+const connectDB = (url) => {
+  return mongoose.connect(url);
+};
+// Database
 // Collections in monogoDB are tables in regular database
-// Documents are simple key-value pairs
+// Documents are simple key-value pairs (data)
+// Schema (structure for documents(data))
+module.exports = connectDB;
