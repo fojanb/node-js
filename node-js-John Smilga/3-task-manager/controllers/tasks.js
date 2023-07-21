@@ -1,32 +1,57 @@
-const taskList = require("../taskList");
-const generateID = () => {
-  return Math.random();
+const Task = require("../db/models/Task");
+
+const getTasks = async (req, res) => {
+  const tasks = await Task.find({});
+  res.status(200).json({ tasks });
 };
-const getTasks = (req, res) => {
-  res.status(200).json({ success: true, taskList: taskList });
-};
-const getTask = (req, res) => {
+const getTask = async (req, res) => {
   const { id } = req.params;
-  res.send(`Get one task with id : ${id}`);
+  const task = await Task.findById(id);
+  res.status(200).json({ task });
 };
-const postTask = (req, res) => {
-  if (!req.body.task) {
-    res.status(404).json({ success: false, msg: "Please provide a task" });
-  } else {
-    let newTask = { id: generateID(), task: req.body.task };
-    taskList.push(newTask);
-    res.status(200).json({ success: true, taskList: taskList });
-  }
+const postTask = async (req, res) => {
+  const task = await Task.create(req.body);
+  res.status(200).json({ task });
 };
 const patchTask = (req, res) => {
   const { id } = req.params;
   res.send(`Edit one task with id : ${id}`);
 };
-const deleteTask = (req, res) => {
+const deleteTask = async (req, res) => {
   const { id } = req.params;
-  res.send(`Delete one task with id : ${id}`);
+  const task = await Task.deleteOne({_id : id});
+  res.send(200).json({});
 };
 module.exports = { getTask, getTasks, postTask, patchTask, deleteTask };
+// const taskList = require("../taskList");
+// const generateID = () => {
+//   return Math.random();
+// };
+// const getTasks = (req, res) => {
+//   res.status(200).json({ success: true, taskList: taskList });
+// };
+// const getTask = (req, res) => {
+//   const { id } = req.params;
+//   res.send(`Get one task with id : ${id}`);
+// };
+// const postTask = (req, res) => {
+//   if (!req.body.task) {
+//     res.status(404).json({ success: false, msg: "Please provide a task" });
+//   } else {
+//     let newTask = { id: generateID(), task: req.body.task };
+//     taskList.push(newTask);
+//     res.status(200).json({ success: true, taskList: taskList });
+//   }
+// };
+// const patchTask = (req, res) => {
+//   const { id } = req.params;
+//   res.send(`Edit one task with id : ${id}`);
+// };
+// const deleteTask = (req, res) => {
+//   const { id } = req.params;
+//   res.send(`Delete one task with id : ${id}`);
+// };
+// module.exports = { getTask, getTasks, postTask, patchTask, deleteTask };
 
 /*
 👉So far you must have good grasp of why we need Postman or Insomnia tools:
