@@ -4,6 +4,8 @@ const PORT = 5000;
 const tasksRoute = require("./routes/tasks");
 const connectDB = require("./db/connect");
 require("dotenv").config();
+// Statics
+app.use(express.static("./public"))
 // Middleware:
 app.use(express.json());
 app.use("/api/v1/tasks", tasksRoute);
