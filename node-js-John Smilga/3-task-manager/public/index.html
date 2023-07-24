@@ -8,12 +8,13 @@
   </head>
   <body>
     <div class="container">
-      <div>Task Manager App</div>
-      <form action="" method="post" id="createTask">
-        <input type="text" name="task" value=""/>
-        <button type="submit">submit</button>
+      <div id="title">Task Manager App with Node.js And MongoDB (Mongoose)</div>
+      <form id="createTask">
+        <input type="text" name="name" value="" placeholder="Enter task" autocomplete="off"/>
+        <button type="submit">Add</button>
       </form>
     </div>
-    <script src="main.js"></script>
+    <div class="tasks"></div>
+    <script src="browser.js" type="module"></script>
   </body>
 </html>

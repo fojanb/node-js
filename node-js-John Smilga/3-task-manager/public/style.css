@@ -1,12 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 * {
   box-sizing: border-box;
   margin: 0 auto;
+  font-family: "Concert One", cursive;
+  font-size: 1.1rem;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    margin: 50px auto;
+body {
+  background-color: #e2e2df;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+  background-color: #a3c4f3;
+  width: 50%;
+  padding: 30px;
+  border: 10px solid #cfbaf0;
+  border-radius: 10px;
+}
+.container #title {
+  font-size: 25px;
+  color: #3f7294;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+form input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 5px solid #929deede;
+  background-color: #fbf8cc;
+}
+form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f1c0e8;
+  width: 200px;
+  color: #757871;
+  border: 5px solid #c7f9cc;
+  cursor: pointer;
+}
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+  width: 50%;
+  padding: 30px;
+}
+.task{
+  display: flex;
+  justify-content: space-between;
+  background-color: #caffbf;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 5px solid #929deede;
+  color: #3f7294;
+}
+.tools{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tools button{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d5c5f0;
+  width: 100px;
+  color: #3f7294;
+  border: 5px solid #5dd39e;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
 }
