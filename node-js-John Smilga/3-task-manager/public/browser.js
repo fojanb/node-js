@@ -10,16 +10,28 @@ const renderTasksOnScreen = (tasks) => {
   tasks.forEach((task) => {
     let div = document.createElement("div");
     div.classList.add("task");
-    div.innerHTML = `<div>${task.name}</div><div class="tools"><button>Edit</button><button>Delete</button></div>`;
+    div.innerHTML = `<div>${task.name}</div><div class="tools"><button>Edit</button><button id='${task._id}'>Delete</button></div>`;
     document.querySelector(".tasks").append(div);
+    document.getElementById(`${task._id}`).addEventListener("click", (e) => {
+      e.target.parentNode.parentNode.remove();
+      deleteTaskFromMongoDB(e.target.id);
+    });
   });
 };
 // GET request (get ALL tasks)
 const getTasksFromMongoDB = async () => {
   try {
-    const response = await fetch(`http://localhost:5000/api/v1/tasks`);
+    const response = await fetch(`http://localhost:5000/api/v1/tasks`, {
+      method: "get",
+    });
     const data = await response.json();
-    renderTasksOnScreen(data.tasks);
+    if (!data.tasks.length) {
+      const emptyList = document.createElement("div");
+      emptyList.innerHTML = `<h3 style="color:#3f7294;">No available tasks</h3>`;
+      document.querySelector(".tasks").append(emptyList);
+    } else {
+      renderTasksOnScreen(data.tasks);
+    }
   } catch (error) {
     console.log(error);
   }
@@ -43,6 +55,18 @@ const postTaskToMogoDB = async () => {
     console.log(error);
   }
 };
+// Delete request
+const deleteTaskFromMongoDB = async (id) => {
+  try {
+    const response = await fetch(`http://localhost:5000/api/v1/tasks/${id}`, {
+      method: "delete",
+    });
+    
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 window.addEventListener("load", () => {
   getTasksFromMongoDB();
   document

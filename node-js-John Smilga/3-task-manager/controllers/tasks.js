@@ -48,8 +48,7 @@ const deleteTask = async (req, res) => {
       // Custome error handler
       return res.status(404).json({ msg: `Not fount the task with id=${id}` });
     }
-    const tasks = await Task.find({});
-    res.status(200).json({ tasks });
+    res.status(200).json({ task });
   } catch (error) {
     res.status(500).json({ msg: error });
   }

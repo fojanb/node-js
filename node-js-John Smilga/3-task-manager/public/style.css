@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 * {
   box-sizing: border-box;
   margin: 0 auto;
-  font-family: "Concert One", cursive;
+  font-family: "Itim", cursive;
   font-size: 1.1rem;
 }
 body {
@@ -22,9 +22,15 @@ body {
   border-radius: 10px;
 }
 .container #title {
-  font-size: 25px;
-  color: #3f7294;
+  font-size: 22px;
+  color: #4a80a3;
   margin-bottom: 20px;
+  font-weight: bold;
+}
+.container #title #title-1,
+.container #title #title-2 {
+  color: #e0fba5;
+  font-size: 20px;
 }
 form {
   display: flex;
@@ -48,6 +54,7 @@ form button {
   color: #757871;
   border: 5px solid #c7f9cc;
   cursor: pointer;
+  font-weight: bold;
 }
 .tasks {
   display: flex;
@@ -59,23 +66,26 @@ form button {
   width: 50%;
   padding: 30px;
 }
-.task{
+.task {
   display: flex;
   justify-content: space-between;
-  background-color: #caffbf;
+  align-items: center;
+  background-color: #dff7b6;
   width: 100%;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
   border: 5px solid #929deede;
   color: #3f7294;
+  font-weight: bold;
+  position: relative;
 }
-.tools{
+.tools {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.tools button{
+.tools button {
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -86,4 +96,6 @@ form button {
   cursor: pointer;
   border-radius: 5px;
   margin: 10px;
+  font-weight: bold;
+  position:relative;
 }
