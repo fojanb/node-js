@@ -71,7 +71,7 @@ const patchTask = async (req, res) => {
     }
     const tasks = await Task.find({});
     res.json({ task });
-  } catch (error) {
+  } catch (error) {                                                                                                                                                                                                           
     res.status(500).json({ msg: error });
   }
 };
